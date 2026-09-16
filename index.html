@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Un pequeño rincón entre estrellas y una carta por descubrir.">
+  <title>Una carta para Pablo · Migajitas</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23101c30'/%3E%3Cpath d='M6 10h20v14H6zM6 10l10 8 10-8' fill='none' stroke='%23bddcaa' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="contenido.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <header><a class="brand" href="./">✦ <span>MIGAJITAS</span></a><span class="header-note">un pequeño rincón para ti</span><button id="motion" class="quiet" aria-pressed="false">Pausar animación</button></header>
+  <main>
+    <section id="welcome" class="welcome" aria-labelledby="welcome-title">
+      <div class="scene">
+        <div class="orbit" aria-hidden="true"></div>
+        <span class="spark s1" aria-hidden="true">✦</span><span class="spark s2" aria-hidden="true">✧</span>
+        <div class="speech" id="cat-speech">Tengo algo para ti.</div>
+        <div class="cat-stage"><div class="sprite hero-cat" role="img" aria-label="Gatita vestida de huasita que parpadea, se lame la patita y lleva una carta" data-mode="idle"></div></div>
+        <div class="cat-actions" aria-label="Jugar con la gatita"><button data-cat-action="groom">Patita</button><button data-cat-action="letter">La carta</button><button data-cat-action="walk">Pasear</button></div>
+        <span class="scene-caption">UNA PEQUEÑA MENSAJERA</span>
+      </div>
+      <div class="invitation">
+        <p class="eyebrow">PARA PABLO, DE JAVIERA</p>
+        <h1 id="welcome-title">Hola, Pablo.<br><em>Hay una carta<br class="desktop-break"> para ti.</em></h1>
+        <p class="intro">Preparé este pequeño espacio con tiempo y cariño. Quería dejarte unas palabras, y alguien quiso ayudarme a entregártelas.</p>
+        <p class="question" id="question">¿Te gustaría leerlas?</p>
+        <div class="actions"><button class="primary" id="read">Sí, leer la carta <span aria-hidden="true">✉</span></button><button class="secondary" id="later">Quizás…</button></div>
+        <button class="exit" id="decline">Ahora no</button>
+        <p class="hint" id="hint" aria-live="polite">Puedes tomarte tu tiempo.</p>
+      </div>
+    </section>
+    <section id="goodbye" class="goodbye" hidden aria-labelledby="bye-title"><div class="sprite invitation-cat" data-mode="letter" role="img" aria-label="La gatita inclina la cabeza y ofrece su sobre"></div><div><p class="eyebrow">UN MIAU ANTES DE IRTE</p><h2 id="bye-title" tabindex="-1">¿Y si te quedas<br>un ratito?</h2><p>La mensajera todavía tiene algo para ti.<br>Puedes escuchar una canción o abrir la carta.</p><button class="primary" id="read-again">Bueno, quiero leerla ✉</button><br><button class="exit" id="back">Volver al inicio</button></div></section>
+    <section id="letter-view" class="letter-view" hidden aria-labelledby="letter-title">
+      <button class="quiet" id="close-letter">← Volver al inicio</button>
+      <aside class="letter-side side-left" aria-hidden="true"><div class="sticker" style="--sx:0%;--sy:0%"></div><div class="side-walk"><div class="sprite" data-mode="walk"></div></div><div class="sticker motorcycle" aria-hidden="true"></div></aside>
+      <aside class="letter-side side-right" aria-hidden="true"><div class="sticker" style="--sx:100%;--sy:100%"></div><div class="sprite" data-mode="groom"></div><div class="sticker" style="--sx:50%;--sy:100%"></div></aside>
+      <article class="paper"><p class="eyebrow">UNA CARTA PARA TI</p><h2 id="letter-title" tabindex="-1">Pablo:</h2><div id="letter-text"></div><p class="signature" id="signature">Javiera</p><span class="paper-star" aria-hidden="true">✦</span></article>
+      <div class="rose-finale" id="rose-finale"><div class="snubbull animated-character" data-mode="rose" role="img" aria-label="Snubbull con ojitos de disculpa, ofreciendo una rosa roja"></div><p>Una pequeña flor para ti.</p></div>
+
+    </section>
+    <div class="hobby-shelf" aria-label="Pequeños guiños a tus hobbies"><div class="sticker" role="img" aria-label="Cartas de fantasía" style="--sx:0%;--sy:0%"></div><div class="sticker" role="img" aria-label="Cartas de criaturas" style="--sx:50%;--sy:0%"></div><div class="sticker" role="img" aria-label="Control de consola" style="--sx:100%;--sy:0%"></div><div class="sticker motorcycle" role="img" aria-label="Moto negra estilo Renegade, con detalles rojos"></div><div class="sticker" role="img" aria-label="Microchip" style="--sx:50%;--sy:100%"></div><div class="sticker" role="img" aria-label="Mecha" style="--sx:100%;--sy:100%"></div></div>
+    <section id="music" class="music music-room" aria-labelledby="music-title"><div class="music-heading"><div><p class="eyebrow">TRES CANCIONES, UN PEQUEÑO RINCÓN</p><h2 id="music-title">Para escuchar por aquí.</h2></div><span aria-hidden="true">♫</span></div><div id="song-buttons" class="song-buttons" aria-label="Elegir canción"></div><div id="player"></div><a id="spotify-link" target="_blank" rel="noopener noreferrer">Escuchar en Spotify ↗</a></section>
+  </main>
+  <footer><span>✧ &nbsp; HECHO A MANO, CON CARIÑO</span><span class="game-notes">GATITOS · VIDEOJUEGOS · ESTRELLAS</span></footer>
+  <noscript><p>Activa JavaScript para abrir la carta y usar los botones.</p></noscript>
+</body>
+</html>
