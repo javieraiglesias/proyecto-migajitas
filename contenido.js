@@ -1,20 +1,14 @@
-// Edita solamente este archivo para personalizar la carta y la música.
-// Cada texto entre comillas representa un párrafo. Conserva comas y comillas.
 window.MIGAJITAS = {
-  carta: [
-    "No sé muy bien cómo empezar. He pensado en lo que pasó hoy y quiero pedirte perdón por mi comportamiento y por el mal rato que te hice pasar. Sé que esto también es difícil para ti. Me dejé llevar por la pena y la ansiedad, y terminé expresando lo que siento de una manera que te hizo daño. No quería eso, pero entiendo que mi intención no borra cómo pudiste sentirte.",
-    "Me cuesta mucho aceptar que las cosas hayan cambiado entre nosotros. Te extraño, y no solo en los momentos grandes. Te extraño en las cosas pequeñas, cuando me pasa algo y quisiera contártelo, cuando recuerdo alguna tontera nuestra o cuando pienso en todos los planes que imaginamos juntos. Hay tanto de ti en mis recuerdos que a veces no sé qué hacer con todo ese cariño.",
-    "Todavía te amo, Pablo. Me cuesta escribirlo sabiendo que decirlo no va a cambiar lo que está pasando. Pero tampoco quería despedirme fingiendo que siento menos. Lo que vivimos fue muy importante para mí, y soltar la idea de lo que podríamos haber sido me duele muchísimo.",
-    "Aun así, entiendo que no puedo seguir buscándote desde la desesperación ni insistir para que las cosas sean como yo quisiera. Por eso voy a dejar de insistir y respetar tu espacio. No te escribo para que cambies de opinión ni para que sientas que tienes que responderme. Quería disculparme y decirte con un poco más de calma lo que hoy no supe expresar.",
-    "También necesito volver a cuidarme. Seguir con mi atención de salud mental, retomar el gimnasio y recuperar esas pequeñas cosas que me hacían bien. No tengo todas las respuestas ni sé cuánto me va a costar, pero quiero aprender a estar mejor y a manejar lo que siento sin lastimarme ni lastimar a otras personas. Quiero hacerlo por mí, aunque ahora me cueste encontrar por dónde empezar.",
-    "A veces me siento perdida. Soy sensible, me gana la ansiedad y me cuesta aceptar la distancia cuando quiero tanto a alguien. Sé que eso no justifica cómo actué. Puedo reconocer que me equivoqué sin pensar que soy una mala persona, y quiero hacerme cargo de lo que necesito cambiar. Todavía estoy aprendiendo a querer de una forma que también deje espacio para escuchar y respetar al otro.",
-    "Te admiro mucho. Eres un gran hombre y un excelente profesional, y deseo de corazón que te vaya bien en todo lo que viene. Que puedas estar tranquilo, disfrutar de tus logros y encontrar felicidad en tu día a día. Me habría gustado acompañarte en muchas de esas cosas, pero mis buenos deseos por ti siguen siendo sinceros aunque nuestros caminos hoy sean distintos.",
-    "Una parte de mí espera que algún día podamos volver a encontrarnos y conversar desde otro lugar, con más calma. No sé si pasará. Mientras tanto, me toca seguir adelante y aceptar que no puedo dejar mi vida esperando ese momento.",
-    "Me da pena pensar que con el tiempo podamos volvernos lejanos. Ojalá, cuando te acuerdes de mí, también estén presentes las risas, el cariño y todo lo bonito que compartimos. Me gustaría que este día difícil no fuera lo que definiera tu recuerdo de nosotros.",
-    "Si algún día quieres hablar, puedes escribirme. Yo, por ahora, voy a tomar distancia y ocuparme de estar mejor.",
-    "Perdón por lo de hoy, Pablo. Gracias por lo que compartimos y por todo lo que significaste en mi vida. Te quiero muchísimo, y de corazón espero que seas feliz."
+  "carta": [
+    "Quería escribirte porque me hace muy feliz volver a hablar contigo. Extrañaba recibir un mensaje tuyo, saber cómo estás y poder compartir contigo un poquito de mi día. Me alegra mucho que estemos retomando el contacto, y te lo agradezco de corazón.",
+    "También entiendo que puedas tener dudas o cierta desconfianza por lo que vivimos y por algunas actitudes mías. Sé que unos meses pueden parecer poco tiempo para hablar de cambios, y no espero que una carta sea suficiente para que vuelvas a confiar en mí. Me gustaría que, de a poco, puedas ir viendo esos cambios en mi manera de actuar.",
+    "Todo el dolor de este tiempo me hizo mirar muchas cosas de frente, reconocer mis errores y aprender a hacerme cargo de mí misma. Siento que he madurado y que estoy aprendiendo a ser una mujer más fuerte, esforzada y humilde. Todavía tengo cosas que trabajar, pero hoy valoro mucho más lo sencillo: una conversación, un gesto de cariño, la tranquilidad de compartir con alguien y sentirse apreciada. Mis prioridades han cambiado; lo material ha perdido importancia frente al cariño y a los vínculos que de verdad quiero cuidar.",
+    "El amor y la admiración que siento por ti siguen ahí. Tú y la Princesa tienen un lugar inmenso en mi corazón, y eso no ha cambiado.",
+    "Sé que ahora quieres dedicarte a ti, seguir creciendo y avanzar en tus propios proyectos. Lo respeto y me alegra que estés buscando lo que te hace bien. Desde la distancia, me nace darte ánimo, alegrarme por tus logros y, cuando se dé, sacarte alguna sonrisa. Me gustaría que hablar conmigo se sienta tranquilo, que puedas ser tú y contarme lo que quieras, sin sentir que tienes que darme algo a cambio.",
+    "Ojalá podamos ir recuperando la confianza con tiempo y que tengas la oportunidad de conocer cómo estoy hoy. No quiero apresurar nada ni que mi alegría por volver a hablar se convierta en una presión para ti. Valoro este acercamiento y quiero cuidarlo, respetando tus tiempos y tu espacio.",
+    "Deseo que tengas un lindo octubre, que tus proyectos vayan tomando forma y que encuentres momentos para disfrutar de todo lo que estás construyendo. Yo seguiré trabajando en mí y alegrándome por las cosas buenas que te pasen.",
+    "Te mando mucho cariño, un abrazo y unos brillitos a la distancia. ✨"
   ],
-  firma: "Javiera",
-  // Las tres canciones están configuradas en app.js.
-  kooksTrackId: "4J6efqS8fTv0teJdgMuwCm"
+  "firma": "Javiera",
+  "kooksTrackId": "4J6efqS8fTv0teJdgMuwCm"
 };

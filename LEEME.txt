@@ -1,51 +1,37 @@
-PROYECTO MIGAJITAS — VERSIÓN 3 — DIECIOCHO
+PROYECTO MIGAJITAS — OCTUBRE / HALLOWEEN
 
-Descomprime el ZIP en una carpeta nueva y abre index.html.
-Mantén todos los archivos y la carpeta assets juntos.
-No se ha publicado todavía en GitHub.
+PARA VERLO
+Descomprime el ZIP y abre index.html. Mantén la carpeta assets junto a los archivos.
 
-NOVEDADES
-Gatita vestida de huasita con ocho poses: pestañeo, patita, aseo, sobre y pasos.
-Transiciones cortas entre poses, ritmos distintos y respiración continua.
-La base sigue siendo una secuencia de poses, no una animación de video.
-Botones Patita, La carta y Pasear para activar sus gestos.
-Personajes a los lados de la carta; encima de ella en pantallas pequeñas.
-Ahora no abre una invitación de la gatita con el sobre.
-Seis pequeños objetos ilustrados: cartas, control, moto, chip y mecha.
-Moto negra con líneas rojas basada en la foto de la Renegade.
-Snubbull con ojitos de disculpa ofreciendo una rosa debajo de la carta.
-La animación final se activa cuando su zona entra en pantalla.
-Tres canciones en un reproductor con selector. Pulsa reproducir en Spotify.
-Cambiar de canción interrumpe la anterior; cambiar de pantalla conserva el reproductor.
-La reproducción requiere internet y depende de Spotify.
+CAMBIOS
+La carta de octubre reemplaza la despedida anterior (contenido.js).
+Tres disfraces de la gatita ploma: calabaza, princesa y hada.
+Botones para lamerse la patita, llevar la carta y pasear.
+Animación mediante ocho poses, transiciones y movimiento continuo programado;
+no es un video ni una animación articulada. Puedes pausarla desde arriba.
+Snubbull feliz lanzando besitos al llegar al final de la carta.
+Fantasmitas con sombrero de bruja sobre el fondo azul de estrellas.
+Mapa ilustrativo de La Serena y Vallenar con hilo rojo y corazones.
+Solo aparecen las ciudades; el mapa no localiza casas ni mide distancias.
+Carta coleccionable de Javiera y Pablo con Snorlax, Totodile y Snubbull.
+Se conservan las tres canciones y los hobbies.
 
-TU CARTA
-Edita los párrafos de contenido.js. La carta completa de Javiera ya está incorporada.
+ACTUALIZAR LA PÁGINA QUE YA TIENES
+1. Entra a tu repositorio proyecto-migajitas en GitHub.
+2. En Code elige Add file > Upload files.
+3. Arrastra el CONTENIDO descomprimido: index.html, style.css, app.js,
+   contenido.js y la carpeta assets completa. No subas el ZIP.
+4. Guarda con Commit changes. Los archivos del mismo nombre se reemplazarán.
+5. Espera a que termine el despliegue de Pages y recarga tu enlace.
+index.html debe permanecer en la raíz. Conserva la configuración de Pages existente.
+Esta actualización todavía no ha sido publicada desde aquí.
 
-VALIDACIÓN
-Sintaxis JavaScript y referencias a archivos e identificadores revisadas.
-Prueba de interacciones en DOM simulado: botones, música, reloj, pausa y aparición final.
-Ilustraciones inspeccionadas. No se hizo prueba visual en navegador.
-La animación usa cambios de pose: no es un video de movimiento continuo.
+MÚSICA Y CELULAR
+Spotify y las fuentes web requieren internet. La reproducción depende de Spotify.
+El diseño tiene ajustes para pantallas pequeñas y respeta reducir movimiento.
 
-FUENTES DE MÚSICA
-Eres — Café Tacvba: https://open.spotify.com/track/6kdCN6gTWLcLxmLXoUcwuI
-Solo un Segundo — Bacilos: https://open.spotify.com/track/1hMQi73KABRBsxSmFNnxBS
-All the Time — The Kooks: https://open.spotify.com/track/4J6efqS8fTv0teJdgMuwCm
-
-IMÁGENES
-Generadas con la herramienta integrada. Briefs: gatita atigrada de ojos verdes
-basada en las referencias, ocho poses consistentes en pixel art sobre azul;
-y seis objetos de hobbies en pixel art para la decoración.
-
-GITHUB
-Sube los archivos de esta carpeta a un repositorio propio del proyecto.
-index.html debe quedar en la raíz. No reemplaces tu otra web personal.
-Guía: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
-
-NUEVAS ILUSTRACIONES
-Generadas con la herramienta integrada: motocicleta negra estilo Renegade basada
-en la foto; ocho poses de Snubbull ofreciendo una rosa; edición de las ocho poses
-de la gatita con vestido floral de huasita y cinta tricolor.
-
-Corrección de pelaje: gris plomo con rayas oscuras en todas las poses.
+VALIDACIÓN Y LÍMITES
+Sintaxis JavaScript, rutas de archivos y referencias DOM revisadas.
+Ilustraciones inspeccionadas. No se pudo ejecutar la prueba visual en navegador.
+Tampoco se pudo cargar la página pública desde este entorno.
+Prueba los botones y la lectura en tu celular antes de compartir el enlace.

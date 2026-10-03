@@ -11,7 +11,8 @@
   <script src="contenido.js" defer></script>
   <script src="app.js" defer></script>
 </head>
-<body>
+<body data-costume="calabaza">
+  <div class="ghost-sky" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
   <div class="stars" aria-hidden="true"></div>
   <header><a class="brand" href="./">✦ <span>MIGAJITAS</span></a><span class="header-note">un pequeño rincón para ti</span><button id="motion" class="quiet" aria-pressed="false">Pausar animación</button></header>
   <main>
@@ -20,9 +21,9 @@
         <div class="orbit" aria-hidden="true"></div>
         <span class="spark s1" aria-hidden="true">✦</span><span class="spark s2" aria-hidden="true">✧</span>
         <div class="speech" id="cat-speech">Tengo algo para ti.</div>
-        <div class="cat-stage"><div class="sprite hero-cat" role="img" aria-label="Gatita vestida de huasita que parpadea, se lame la patita y lleva una carta" data-mode="idle"></div></div>
+        <div class="cat-stage"><div class="sprite hero-cat" role="img" aria-label="Gatita ploma con disfraz de Halloween que parpadea, se lame la patita y lleva una carta" data-mode="idle"></div></div>
         <div class="cat-actions" aria-label="Jugar con la gatita"><button data-cat-action="groom">Patita</button><button data-cat-action="letter">La carta</button><button data-cat-action="walk">Pasear</button></div>
-        <span class="scene-caption">UNA PEQUEÑA MENSAJERA</span>
+        <div class="costumes" aria-label="Elegir disfraz"><button data-costume="calabaza" aria-pressed="true">🎃 Calabaza</button><button data-costume="princesa" aria-pressed="false">♛ Princesa</button><button data-costume="hada" aria-pressed="false">✧ Hada</button></div><span class="scene-caption" id="costume-status" aria-live="polite">LA MICHI ESTÁ DE CALABAZA</span>
       </div>
       <div class="invitation">
         <p class="eyebrow">PARA PABLO, DE JAVIERA</p>
@@ -34,16 +35,22 @@
         <p class="hint" id="hint" aria-live="polite">Puedes tomarte tu tiempo.</p>
       </div>
     </section>
+
+    <section class="thread-map" id="thread-map" aria-labelledby="map-title"><div class="map-copy"><p class="eyebrow">DOS CIUDADES, UN HILO ROJO</p><h2 id="map-title">Un poquito más cerca.</h2><p>De La Serena a Vallenar,<br>un hilo que lleva cariño.</p><div class="map-address"><strong>Javiera · La Serena</strong></div><div class="map-address"><strong>Pablo · Vallenar</strong></div><p class="map-note">Un hilo rojo, invisible a los ojos, une nuestros corazones más allá de la distancia.</p></div>
+    <svg class="thread-art" viewBox="0 0 600 580" role="img" aria-label="Mapa ilustrativo con Vallenar al norte y La Serena al sur, unidos por un hilo rojo en forma de corazón"><defs><pattern id="map-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity=".05"/></pattern></defs><rect width="600" height="580" rx="24" fill="#13273b"/><rect width="600" height="580" fill="url(#map-grid)"/><path d="M200 0L212 60 190 120 220 185 198 245 213 300 185 360 196 425 170 490 187 580H600V0Z" fill="#28404a"/><path d="M200 0L212 60 190 120 220 185 198 245 213 300 185 360 196 425 170 490 187 580" fill="none" stroke="#7b9999" stroke-width="2"/><path d="M395 0Q340 150 380 240T310 580M470 0Q425 170 460 280T415 580" fill="none" stroke="#a4bc9f" stroke-opacity=".14" stroke-width="18"/><text x="68" y="295" fill="#9aacba" font-size="15" transform="rotate(-90 68 295)" letter-spacing="5">OCÉANO PACÍFICO</text><text x="445" y="70" fill="#bfd0c3" font-size="13" letter-spacing="3">CHILE</text>
+    <path class="red-thread" d="M246 465C170 395 150 330 231 297C145 239 207 174 273 240C337 167 424 238 361 294C303 344 219 336 264 261C289 220 328 176 356 124" fill="none" stroke="#fb7284" stroke-width="4" stroke-linecap="round"/>
+    <text x="356" y="133" text-anchor="middle" fill="#ff8296" font-size="42">♥</text><text x="246" y="480" text-anchor="middle" fill="#ff8296" font-size="42">♥</text><text x="380" y="117" fill="#f4f0e9" font-size="22">Vallenar</text><text x="380" y="143" fill="#c4d7ce" font-size="15">Pablo</text><text x="276" y="462" fill="#f4f0e9" font-size="22">La Serena</text><text x="276" y="488" fill="#c4d7ce" font-size="15">Javiera</text><text x="548" y="535" fill="#c4d7ce" font-size="18">N ↑</text></svg></section>
     <section id="goodbye" class="goodbye" hidden aria-labelledby="bye-title"><div class="sprite invitation-cat" data-mode="letter" role="img" aria-label="La gatita inclina la cabeza y ofrece su sobre"></div><div><p class="eyebrow">UN MIAU ANTES DE IRTE</p><h2 id="bye-title" tabindex="-1">¿Y si te quedas<br>un ratito?</h2><p>La mensajera todavía tiene algo para ti.<br>Puedes escuchar una canción o abrir la carta.</p><button class="primary" id="read-again">Bueno, quiero leerla ✉</button><br><button class="exit" id="back">Volver al inicio</button></div></section>
     <section id="letter-view" class="letter-view" hidden aria-labelledby="letter-title">
       <button class="quiet" id="close-letter">← Volver al inicio</button>
       <aside class="letter-side side-left" aria-hidden="true"><div class="sticker" style="--sx:0%;--sy:0%"></div><div class="side-walk"><div class="sprite" data-mode="walk"></div></div><div class="sticker motorcycle" aria-hidden="true"></div></aside>
       <aside class="letter-side side-right" aria-hidden="true"><div class="sticker" style="--sx:100%;--sy:100%"></div><div class="sprite" data-mode="groom"></div><div class="sticker" style="--sx:50%;--sy:100%"></div></aside>
-      <article class="paper"><p class="eyebrow">UNA CARTA PARA TI</p><h2 id="letter-title" tabindex="-1">Pablo:</h2><div id="letter-text"></div><p class="signature" id="signature">Javiera</p><span class="paper-star" aria-hidden="true">✦</span></article>
-      <div class="rose-finale" id="rose-finale"><div class="snubbull animated-character" data-mode="rose" role="img" aria-label="Snubbull con ojitos de disculpa, ofreciendo una rosa roja"></div><p>Una pequeña flor para ti.</p></div>
+      <article class="paper"><p class="eyebrow">UNA CARTA DE OCTUBRE</p><h2 id="letter-title" tabindex="-1">Pablo:</h2><div id="letter-text"></div><p class="signature" id="signature">Javiera</p><span class="paper-star" aria-hidden="true">✦</span></article>
+      <div class="rose-finale" id="rose-finale"><div class="snubbull animated-character" data-mode="rose" role="img" aria-label="Snubbull feliz sonriendo y lanzando besitos"></div><p>Besitos y brillitos para ti.</p></div>
 
     </section>
     <div class="hobby-shelf" aria-label="Pequeños guiños a tus hobbies"><div class="sticker" role="img" aria-label="Cartas de fantasía" style="--sx:0%;--sy:0%"></div><div class="sticker" role="img" aria-label="Cartas de criaturas" style="--sx:50%;--sy:0%"></div><div class="sticker" role="img" aria-label="Control de consola" style="--sx:100%;--sy:0%"></div><div class="sticker motorcycle" role="img" aria-label="Moto negra estilo Renegade, con detalles rojos"></div><div class="sticker" role="img" aria-label="Microchip" style="--sx:50%;--sy:100%"></div><div class="sticker" role="img" aria-label="Mecha" style="--sx:100%;--sy:100%"></div></div>
+<section class="collectible-section" aria-labelledby="collectible-title"><div class="collectible-copy"><p class="eyebrow">EDICIÓN ESPECIAL · OCTUBRE</p><h2 id="collectible-title">Un equipo muy nuestro.</h2><p>Tú, yo y nuestros compañeros de aventura.</p><span class="tiny-stars" aria-hidden="true">✧ &nbsp; ♡ &nbsp; ✧</span></div><article class="collectible"><div class="card-header"><h3>Javiera &amp; Pablo</h3><span>♡ ∞</span></div><img src="assets/pareja-pokemon.png" width="1536" height="1024" alt="Javiera con vestido rosado y Pablo con suéter gris, junto a Snubbull, Snorlax y Totodile, ilustrados en pixel art"><div class="card-content"><p class="card-caption">Una pequeña aventura compartida</p><h4>♡ Cariño a la distancia <span>+100</span></h4><p>Un mensaje, una sonrisa y un poquito de magia para acercarnos.</p><div class="card-powers"><span>✦ Abrazo de Snorlax</span><span>✦ Alegría de Totodile</span><span>✦ Besitos de Snubbull</span></div><div class="card-bottom"><span>Elemento: cariño</span><span>Edición 01 / 01</span></div></div></article></section>
     <section id="music" class="music music-room" aria-labelledby="music-title"><div class="music-heading"><div><p class="eyebrow">TRES CANCIONES, UN PEQUEÑO RINCÓN</p><h2 id="music-title">Para escuchar por aquí.</h2></div><span aria-hidden="true">♫</span></div><div id="song-buttons" class="song-buttons" aria-label="Elegir canción"></div><div id="player"></div><a id="spotify-link" target="_blank" rel="noopener noreferrer">Escuchar en Spotify ↗</a></section>
   </main>
   <footer><span>✧ &nbsp; HECHO A MANO, CON CARIÑO</span><span class="game-notes">GATITOS · VIDEOJUEGOS · ESTRELLAS</span></footer>

@@ -29,6 +29,7 @@ songs.forEach((song,i)=>{const button=document.createElement("button");button.cl
 selectSong(0);
 function loadMusic() {} // El reproductor permanece montado al cambiar de pantalla.
 function show(id, focusId) {
+  $("thread-map").hidden = id !== "welcome";
   for (const name of ["welcome", "goodbye", "letter-view"]) $(name).hidden = name !== id;
   if (focusId) $(focusId).focus({preventScroll:true});
   window.scrollTo({top:0, behavior:"instant"});
@@ -119,4 +120,15 @@ document.querySelectorAll("[data-cat-action]").forEach(button=>button.addEventLi
  hero.mode=button.dataset.catAction;hero.element.dataset.mode=hero.mode;hero.time=0;hero.until=6500;
  setPose(hero,frameAt(hero.mode,0),paused);
  $("cat-speech").textContent={groom:"Un momento… mi patita.",letter:"Esta cartita es para ti.",walk:"¡Ya voy con el correo!"}[hero.mode];
+}));
+
+// Los tres disfraces comparten las posiciones exactas de los fotogramas.
+const wardrobe={calabaza:"assets/michi-calabaza.png",princesa:"assets/michi-princesa.png",hada:"assets/michi-hada.png"};
+Object.values(wardrobe).forEach(src=>{const img=new Image();img.src=src;});
+document.querySelectorAll("button[data-costume]").forEach(button=>button.addEventListener("click",()=>{
+ const outfit=button.dataset.costume;if(!wardrobe[outfit])return;
+ document.body.dataset.costume=outfit;
+ document.querySelectorAll("button[data-costume]").forEach(b=>b.setAttribute("aria-pressed",String(b===button)));
+ $("costume-status").textContent="LA MICHI ESTÁ DE "+outfit.toUpperCase();
+ document.querySelector(".hero-cat").setAttribute("aria-label","Gatita ploma disfrazada de "+outfit);
 }));
